@@ -1,0 +1,40 @@
+@import './constants/colors.scss';
+@import './constants/typography.scss';
+@import './constants/grid.scss';
+
+.mainNavbar {
+  border-right: solid 1px $color-grey-100;
+  background-color: $color-grey-50;
+
+  & > ul {
+    & > li {
+      padding: $grid-base-unit calc(2 * $grid-base-unit);
+      &.active {
+        border-right: solid 4px $color-violet-base;
+        & > a {
+          font-weight: 600;
+          color: $color-violet-base;
+          &:hover {
+            color: $color-violet-base;
+          }
+        }
+      }
+
+      & > a {
+        @include text-style-typography-ui;
+        color: $color-grey-800;
+
+        &:hover {
+          color: $color-violet-base;
+        }
+      }
+    }
+  }
+
+}
+
+.logoWrapper {
+  width: 100%;
+  text-align: center;
+  padding: calc(2 * $grid-base-unit) 0;
+}

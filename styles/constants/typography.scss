@@ -1,0 +1,117 @@
+@mixin text-style-navigation-item-font-style {
+	font-size:0.875rem;
+	font-family:"Heebo";
+	font-weight:400;
+	font-style:normal;
+	line-height:110%;
+	text-decoration:none;
+	text-transform:none;
+}
+
+@mixin text-style-typography-h-1 {
+	font-size:2rem;
+	font-family:"Heebo";
+	font-weight:700;
+	font-style:normal;
+	line-height:120%;
+	letter-spacing:-0.03em;
+	text-decoration:none;
+	text-transform:none;
+}
+
+@mixin text-style-typography-h-3 {
+	font-size:1.125rem;
+	font-family:"Heebo";
+	font-weight:700;
+	font-style:normal;
+	line-height:120%;
+	letter-spacing:-0.03em;
+	text-decoration:none;
+	text-transform:none;
+}
+
+@mixin text-style-typography-subtitle {
+	font-size:1.125rem;
+	font-family:"Heebo";
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	text-transform:none;
+}
+
+@mixin text-style-typography-body-copy {
+	font-size:1rem;
+	font-family:"Heebo";
+	font-weight:400;
+	font-style:normal;
+	line-height:140%;
+	text-decoration:none;
+	text-transform:none;
+}
+
+@mixin text-style-typography-important-body-copy {
+	font-size:1rem;
+	font-family:"Heebo";
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	text-transform:none;
+}
+@mixin text-style-typography-ui {
+	font-size:1rem;
+	font-family:"Heebo";
+	font-weight:400;
+	font-style:normal;
+	line-height:140%;
+	text-decoration:none;
+	text-transform:none;
+}
+
+@mixin text-style-typography-h-2 {
+	font-size:1.5rem;
+	font-family:"Heebo";
+	font-weight:700;
+	font-style:normal;
+	line-height:120%;
+	letter-spacing:-0.03em;
+	text-decoration:none;
+	text-transform:none;
+}
+
+@mixin text-style-typography-h-4 {
+	font-size:0.75rem;
+	font-family:"Heebo";
+	font-weight:400;
+	font-style:normal;
+	letter-spacing:0.03em;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+@mixin text-style-navbar-item-font-style {
+	font-size:0.875rem;
+	font-family:"Heebo";
+	font-weight:400;
+	font-style:normal;
+	line-height:110%;
+	text-decoration:none;
+	text-transform:none;
+}
+
+@mixin text-style-horizontal-nav-item-font-style {
+	font-size:1rem;
+	font-family:"Heebo";
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	text-transform:none;
+}
+
+@mixin text-style-horizontal-nav-item-font-style-active {
+	font-size:1rem;
+	font-family:"Heebo";
+	font-weight:400;
+	font-style:normal;
+	text-decoration:underline;
+	text-transform:none;
+}

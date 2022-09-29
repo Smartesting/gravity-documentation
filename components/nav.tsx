@@ -1,13 +1,20 @@
-import Link from "next/link";
+import Image from "next/image";
+import styles from '../styles/Nav.module.scss';
+import NavLink from "./navLink";
 
 export default function Nav() {
-  return <nav>
+  return <nav className={styles.mainNavbar}>
+
+    <div className={styles.logoWrapper}>
+      <Image src={"/gravity-icon.svg"} width={"56px"} height={"56px"} objectPosition={"50% 50%"}/>
+    </div>
+
     <ul>
-      <li><Link href={'/'}>Home</Link></li>
-      <li><Link href={'/getting-started'}>Getting started</Link></li>
-      <li><Link href={'/browse-sessions'}>Browsing sessions</Link></li>
-      <li><Link href={'/usages'}>Monitoring usages</Link></li>
-      <li><Link href={'/create-test-scripts'}>Creating test scripts</Link></li>
+      <NavLink href={'/'}>Home</NavLink>
+      <NavLink href={'/getting-started'}>Getting started</NavLink>
+      <NavLink href={'/browse-sessions'}>Browsing sessions</NavLink>
+      <NavLink href={'/usages'}>Monitoring usages</NavLink>
+      <NavLink href={'/create-test-scripts'}>Creating test scripts</NavLink>
     </ul>
   </nav>
 }

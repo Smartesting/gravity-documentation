@@ -1,0 +1,36 @@
+@import './constants/typography.scss';
+@import './constants/colors.scss';
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  @include text-style-typography-body-copy;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-color: $color-grey-50;
+}
+
+body > div#__next {
+  height: 100%;
+}
+
+h1 {
+  @include text-style-typography-h-1
+}
+
+h2 {
+  @include text-style-typography-h-2
+}
+
+h3 {
+  @include text-style-typography-h-3
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}

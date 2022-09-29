@@ -13,5 +13,9 @@ module.exports = module.exports = withMDX({
   // Append the default value with md extensions
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    loader: 'akamai',
+    path: '/',
+  },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 })

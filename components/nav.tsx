@@ -5,9 +5,9 @@ export default function Nav() {
     <ul>
       <li><Link href={'/'}>Home</Link></li>
       <li><Link href={'/getting-started'}>Getting started</Link></li>
-      <li><Link href={'/browse-sessions'}>Browse sessions</Link></li>
-      <li><Link href={'/usages'}>Monitor common usages</Link></li>
-      <li><Link href={'/create-test-scripts'}>Create test scripts</Link></li>
+      <li><Link href={'/browse-sessions'}>Browsing sessions</Link></li>
+      <li><Link href={'/usages'}>Monitoring usages</Link></li>
+      <li><Link href={'/create-test-scripts'}>Creating test scripts</Link></li>
     </ul>
   </nav>
 }

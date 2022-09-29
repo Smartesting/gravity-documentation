@@ -1,11 +1,10 @@
 import Layout from '../components/layout'
 
-# My second MDX page
+export const meta = {
+  headerTitle: 'Browsing sessions'
+}
 
-This is a list in markdown:
+## Finding sessions
+## Session details
 
-- One
-- Two
-- Three
-
-export default ({ children }) => <Layout>{children}</Layout>
+export default ({ children }) => <Layout meta={meta}>{children}</Layout>

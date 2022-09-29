@@ -1,2 +1,11 @@
 import Layout from '../components/layout'
-export default ({ children }) => <Layout>{children}</Layout>
+
+export const meta = {
+  headerTitle: 'Monitoring usages'
+}
+
+## What is an usage?
+## Define new usages
+## Browse usages
+
+export default ({ children }) => <Layout meta={meta}>{children}</Layout>

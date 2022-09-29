@@ -1,11 +1,10 @@
 import Layout from '../components/layout'
 
-# My MDX page
+export const meta = {
+  headerTitle: 'Getting started',
+}
 
-This is a list in markdown:
+## Pre-requisites
+## Installation
 
-- One
-- Two
-- Three
-
-export default ({ children }) => <Layout>{children}</Layout>
+export default ({ children }) => <Layout meta={meta}>{children}</Layout>

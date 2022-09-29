@@ -2,10 +2,13 @@ import type { NextPage } from 'next'
 import Layout from '../components/layout'
 
 const Home: NextPage = () => {
+  const meta = {
+    headerTitle: 'Documentation home',
+    pageTitle: 'Gravity - Documentation'
+  }
+
   return (
-    <Layout>
-      <h1>Gravity - Documentation</h1>
-    </Layout>
+    <Layout meta={meta}></Layout>
   )
 }
 

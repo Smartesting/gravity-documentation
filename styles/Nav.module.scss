@@ -10,7 +10,6 @@
     & > li {
       padding: $grid-base-unit calc(2 * $grid-base-unit);
       &.active {
-        border-right: solid 4px $color-violet-base;
         & > a {
           font-weight: 600;
           color: $color-violet-base;

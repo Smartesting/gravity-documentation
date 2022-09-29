@@ -19,11 +19,13 @@ body > div#__next {
 }
 
 h1 {
-  @include text-style-typography-h-1
+  @include text-style-typography-h-1;
+  color: $color-indigo-brand
 }
 
 h2 {
-  @include text-style-typography-h-2
+  @include text-style-typography-h-2;
+  color: $color-grey-800;
 }
 
 h3 {
@@ -33,4 +35,10 @@ h3 {
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+p {
+  @include text-style-typography-body-copy;
+  line-height: 160%;
+  color: $color-grey-800;
 }

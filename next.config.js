@@ -9,10 +9,11 @@ const withMDX = require('@next/mdx')({
   },
 })
 
-module.exports = module.exports = withMDX({
+module.exports = withMDX({
   // Append the default value with md extensions
   reactStrictMode: true,
   swcMinify: true,
+  assetPrefix: ".",
   images: {
     loader: 'akamai',
     path: '/',

@@ -4,7 +4,61 @@ export const meta = {
   headerTitle: 'Getting started',
 }
 
+Gravity is a Usage-Driven Testing platform, meaning that you need usage data in order to make it works.
+On this page, learn how to start collecting usage data from your application and send them to Gravity.
+
 ## Pre-requisites
+
+- Gravity account
+- Web-based application
+
 ## Installation
+
+ALERT WARNING
+Currently, we support only web-based application. We might support mobile and/or desktop application in the future.
+
+ALERT INFORMATION
+Our data collector is open-source. You can check it out here: https://github.com/Smartesting/gravity-data-collector
+
+### Get your authentication keys
+
+- Navigate to the configuration page
+- Get the key for your production environment
+- Get the key for your testing environment
+
+ALERT INFORMATION
+Why two keys?
+
+### Install the JavaScript library
+
+- NPM
+```
+  npm install gravity-data-collector
+```
+
+- Yarn
+```
+  yarn add gravity-data-collector
+```
+
+- CDN
+```
+<script async id="logger" type="text/javascript"
+        src="https://unpkg.com/@smartesting/gravity-data-collector/dist/gravity-logger-min.js"></script>
+```
+
+
+### Authorize domain (production only)
+
+### Initialize the script
+
+
+## What data are collected?
+- Clicks
+- Inputs
+- Technical information
+
+ALERT INFO
+PII Free
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>

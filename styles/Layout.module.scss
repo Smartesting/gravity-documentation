@@ -7,9 +7,10 @@
   grid-template-columns: 200px 1fr;
   max-width: 1024px;
   margin: 0 auto;
-
+  overflow: hidden;
   & main {
     padding: calc(9 * $grid-base-unit) calc(7 * $grid-base-unit) 0;
+    overflow-y: auto;
     background-color: $color-base-white;
     border-right: solid 1px $color-grey-100;
 

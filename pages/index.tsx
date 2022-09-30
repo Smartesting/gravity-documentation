@@ -16,7 +16,26 @@ const Home: NextPage = () => {
         We call it a Usage-Driven Testing platform.
       </p>
 
-      <video src="https://www.gravity-testing.com/wp-content/uploads/2022/09/Gravity-Presentation-short-format-.mp4"  controls={false} controlsList="nodownload"></video>
+      <h2>Browse the documentation</h2>
+      <p>
+        Learn how to configure and use Gravity
+      </p>
+
+      <ul>
+        <li>
+          Getting started
+          How to install and configure Gravity on your production and test environment and get your first data
+        </li>
+
+        <li>
+          Browse sessions
+          How to explore your data and start figuring out how your customers actually use your application
+        </li>
+
+        <li>
+
+        </li>
+      </ul>
 
     </Layout>
   )

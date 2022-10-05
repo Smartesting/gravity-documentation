@@ -7,8 +7,7 @@ export const meta = {
   headerTitle: 'Getting started',
 }
 
-Gravity is a **Usage-Driven Testing platform**, meaning that you need usage data in order to make it works.
-On this page, learn how to start collecting usage data from your application and send them to Gravity.
+Gravity is a **Usage-Driven Testing platform**, meaning you need usage data to make it work. On this page, learn how to start collecting usage data from your application and send them to Gravity.
 
 ## Pre-requisites
 
@@ -18,7 +17,7 @@ On this page, learn how to start collecting usage data from your application and
 ## Installation
 
 ALERT WARNING
-Currently, we support only web-based application. We might support mobile and/or desktop applications in the future.
+Currently, we support only web-based applications. We might support mobile and/or desktop applications in the future.
 
 ALERT INFORMATION
 Our data collector is open-source. You can check it out here: https://github.com/Smartesting/gravity-data-collector
@@ -75,8 +74,7 @@ Here are the multiple ways to install the collector. Pick the one that matches w
 
 ### Authorize domain (production only)
 
-You **must** tell Gravity from which domain name the collector will send data.
-It allows to ensure the data have been send by you and not someone else on your behalf.
+You ***must*** tell Gravity from which domain name the collector will send data. It allows you to ensure the data have been sent by you and not someone else on your behalf.
 
 Just enter the domain name in the dedicated field (no need to prepend ```http``` or ```https://```)
 
@@ -98,16 +96,16 @@ GravityCollector.init({
 })
 ```
 
-You will usually paste this code into your application entry point (```index.js|html|...```), but nothing prevents you to do it anywhere else (for example, if you want to focus only on a part of your application)
+You will usually paste this code into your application entry point (```index.js|html|...```), but nothing prevents you doing it anywhere else (for example, if you want to focus only on a specific part of your application)
 
 ## What data are collected?
 
 Once initialized, the script will automatically record information and send them to your Gravity domain:
 
 - **Session started** When the collector is initialized, it sends a "Session started" event so you can track when the current user started to interact with your application
-- **Click** triggered when the current user clicks somewhere in the GUI of your app
-- **Fill** triggered when the current user changes the value of an input
-- **Check** triggered when the current user interacts with a checkbox
+- **Click** triggered when the current user clicks somewhere in the GUI of your application
+- **Fill** triggered when the current user changes the value of an input field
+- **Check** triggered when the current user interacts with a check box
 - **Press key/release key** triggered when a user press/release a key of their keyboard
 
 
@@ -116,12 +114,12 @@ PII Free
 
 ## Metadata
 
-A set of metadata is joined with every recorded event:
+A set of metadata is sent with every recorded event:
 
 - **Location** information about the page where the event has been recorded
 - **Viewport** information about the device used by the current user
-- **Data** event specific data (for example: in the case of a **Click**, it contains the coordinates of the pointer when the event happened)
-- **Target** data-related to the HTML element the current user interacted with
+- **Data** event-specific data (for example: in the case of a **Click**, it contains the coordinates of the pointer when the event happened)
+- **Target** data related to the HTML element the current user interacted with
 
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>

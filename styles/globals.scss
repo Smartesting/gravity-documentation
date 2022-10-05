@@ -31,11 +31,6 @@ h3 {
   @include text-style-typography-h-3
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
 p {
   @include text-style-typography-body-copy;
   line-height: 160%;

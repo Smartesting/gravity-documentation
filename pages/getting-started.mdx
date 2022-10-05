@@ -1,4 +1,7 @@
 import Layout from '../components/layout'
+import Image from 'next/image'
+import authKeys from '../public/img/getting-started/auth-keys.png'
+import configDomain from '../public/img/getting-started/config-domain.png'
 
 export const meta = {
   headerTitle: 'Getting started',
@@ -26,7 +29,10 @@ Our data collector is open-source. You can check it out here: https://github.com
 - Get the key for your production environment. Its role is to let Gravity knows that the data should be stored as **actual "User"** sessions.
 - Get the key for your testing environment. Its role is to let Gravity knows that the data should be stored as **"Test"** sessions.
 
-[SCREENSHOT]
+<Image
+    src={authKeys}
+    alt="Highlight the two fields containing prod and test environment auth keys"
+  />
 
 ALERT INFORMATION
 Why two keys?
@@ -73,7 +79,11 @@ You **must** tell Gravity from which domain name the collector will send data.
 It allows to ensure the data have been send by you and not someone else on your behalf.
 
 Just enter the domain name in the dedicated field (no need to prepend ```http``` or ```https://```)
-[SCREENSHOT]
+
+<Image
+    src={configDomain}
+    alt="The field to configure restriction on a domain and subdomains"
+  />
 
 ### Initialize the script
 

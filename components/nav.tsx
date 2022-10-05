@@ -13,7 +13,7 @@ export default function Nav() {
       <NavLink href={'/'}>Home</NavLink>
       <NavLink href={'/getting-started'}>Getting started</NavLink>
       <NavLink href={'/browse-sessions'}>Browsing sessions</NavLink>
-      <NavLink href={'/usages'}>Monitoring usages</NavLink>
+      <NavLink href={'/usages'}>Tracking usage coverage</NavLink>
       <NavLink href={'/create-test-scripts'}>Creating test scripts</NavLink>
     </ul>
   </nav>

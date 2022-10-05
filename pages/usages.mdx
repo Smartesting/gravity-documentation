@@ -1,11 +1,47 @@
 import Layout from '../components/layout'
 
 export const meta = {
-  headerTitle: 'Monitoring usages'
+  headerTitle: 'Tracking usage coverage'
 }
 
-## What is an usage?
+The core idea of Gravity is to help you build an **end-to-end test suite** that covers efficiently the most important features and paths for your users. This is where the **Usages** section of Gravity can help.
+
+## What is a usage?
+
+In Gravity, a usage is an ordered sequence of user actions within the same page or across multiple pages.
+When a user or test session go through all the steps of a usage, it will be considered as fulfilled (for a user session) or covered (for a test session)
+
+For example, a "Login" usage can look like this:
+
+[SCREENSHOT login usage]
+
 ## Define new usages
+
+You can define a new usage from a session page:
+
+[SCREENSHOT 'define new usage' CTA]
+
+A new screen is displayed, allowing you to build the sequence of actions that will be the different steps of the usage:
+
+[SCREENSHOT]
+
+- You can select a whole page and no actions within. It will add a "Any action" event in the usage, meaning that a simple visit of the page will fulfill this step
+- You can modify the page address of a usage step to make it dynamic. In the following example, the step will be fulfilled on *any* ```/transactions``` page
+
+[SCREENSHOT]
+
 ## Browse usages
+
+You can find all the usages you defined for you application under the **Usages** section of Gravity
+[SCREENSHOT]
+
+For each of them, you can see:
+
+- The steps a session has to go through to consider the usage as fulfilled or covered
+- Metrics on the user and test sessions that fulfill or cover the usage
+
+Use these metrics to learn which usages needs more tests and which ones could be less tested
+
+
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>

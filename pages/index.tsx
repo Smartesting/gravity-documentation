@@ -16,6 +16,7 @@ const Home: NextPage = () => {
         We call it a Usage-Driven Testing platform.
       </p>
 
+      <h2>What is Usage-Driven Testing?</h2>
       <h2>Browse the documentation</h2>
       <p>
         Learn how to configure and use Gravity

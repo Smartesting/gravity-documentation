@@ -4,7 +4,7 @@ export const meta = {
   headerTitle: 'Getting started',
 }
 
-Gravity is a Usage-Driven Testing platform, meaning that you need usage data in order to make it works.
+Gravity is a **Usage-Driven Testing platform**, meaning that you need usage data in order to make it works.
 On this page, learn how to start collecting usage data from your application and send them to Gravity.
 
 ## Pre-requisites
@@ -15,50 +15,103 @@ On this page, learn how to start collecting usage data from your application and
 ## Installation
 
 ALERT WARNING
-Currently, we support only web-based application. We might support mobile and/or desktop application in the future.
+Currently, we support only web-based application. We might support mobile and/or desktop applications in the future.
 
 ALERT INFORMATION
 Our data collector is open-source. You can check it out here: https://github.com/Smartesting/gravity-data-collector
 
 ### Get your authentication keys
 
-- Navigate to the configuration page
-- Get the key for your production environment
-- Get the key for your testing environment
+- Go to the **Configuration** page of your domain. If you do not have any data yet, you will automatically be redirected to this page.
+- Get the key for your production environment. Its role is to let Gravity knows that the data should be stored as **actual "User"** sessions.
+- Get the key for your testing environment. Its role is to let Gravity knows that the data should be stored as **"Test"** sessions.
+
+[SCREENSHOT]
 
 ALERT INFORMATION
 Why two keys?
 
+Gravity helps you to decide what end-to-end tests should be integrated in your test suite. In order to do so, it compares what your users actually do against what you test.
+That's why you need to set up the collector on both environments to get all the value of Gravity.
+
 ### Install the JavaScript library
 
-- NPM
+ALERT INFORMATION
+This library is designed to work in a **browser**. Do not install it in a Node environment
+
+Here are the multiple ways to install the collector. Pick the one that matches with your tool stack:
+
+- **NPM**
 ```
   npm install gravity-data-collector
 ```
 
-- Yarn
+- **Yarn**
 ```
   yarn add gravity-data-collector
 ```
 
-- CDN
+- **CDN**
 ```
 <script async id="logger" type="text/javascript"
         src="https://unpkg.com/@smartesting/gravity-data-collector/dist/gravity-logger-min.js"></script>
 ```
 
+- **Add it to your ```package.json``` file**
+```
+{
+  "dependencies": {
+    "@smartesting/gravity-data-collector": "^2.1.9"
+  }
+}
+```
+
 
 ### Authorize domain (production only)
 
+You **must** tell Gravity from which domain name the collector will send data.
+It allows to ensure the data have been send by you and not someone else on your behalf.
+
+Just enter the domain name in the dedicated field (no need to prepend ```http``` or ```https://```)
+[SCREENSHOT]
+
 ### Initialize the script
 
+Once the collector has been correctly installed, you must tell it when to start. It only takes
+a simple line of code:
+
+```
+import GravityCollector from '@smartesting/gravity-data-collector/dist'
+
+GravityCollector.init({
+ authKey: '<Production or test environment key>'
+})
+```
+
+You will usually paste this code into your application entry point (```index.js|html|...```), but nothing prevents you to do it anywhere else (for example, if you want to focus only on a part of your application)
 
 ## What data are collected?
-- Clicks
-- Inputs
-- Technical information
+
+Once initialized, the script will automatically record information and send them to your Gravity domain:
+
+- **Session started** When the collector is initialized, it sends a "Session started" event so you can track when the current user started to interact with your application
+- **Click** triggered when the current user clicks somewhere in the GUI of your app
+- **Fill** triggered when the current user changes the value of an input
+- **Check** triggered when the current user interacts with a checkbox
+- **Press key/release key** triggered when a user press/release a key of their keyboard
+
 
 ALERT INFO
 PII Free
+
+## Metadata
+
+A set of metadata is joined with every recorded event:
+
+- **Location** information about the page where the event has been recorded
+- **Viewport** information about the device used by the current user
+- **Data** event specific data (for example: in the case of a **Click**, it contains the coordinates of the pointer when the event happened)
+- **Target** data-related to the HTML element the current user interacted with
+
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>

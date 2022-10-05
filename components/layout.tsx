@@ -25,8 +25,10 @@ export default function Layout({ children, meta } : React.PropsWithChildren<{met
       <Nav />
 
       <main>
-        <h1>{meta.pageTitle || meta.headerTitle}</h1>
-        {children}
+        <div className={styles.contentWrapper}>
+          <h1>{meta.pageTitle || meta.headerTitle}</h1>
+          {children}
+        </div>
       </main>
     </div>
   )

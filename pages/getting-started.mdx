@@ -2,6 +2,7 @@ import Layout from '../components/layout'
 import Image from 'next/image'
 import authKeys from '../public/img/getting-started/auth-keys.png'
 import configDomain from '../public/img/getting-started/config-domain.png'
+import Alert, { AlertType } from '../components/ui/Alert'
 
 export const meta = {
   headerTitle: 'Getting started',
@@ -16,11 +17,14 @@ Gravity is a **Usage-Driven Testing platform**, meaning you need usage data to m
 
 ## Installation
 
-ALERT WARNING
-Currently, we support only web-based applications. We might support mobile and/or desktop applications in the future.
+<Alert type={AlertType.warning}>
+  We support only web-based applications for now. We might support mobile and/or desktop applications in the future.
+</Alert>
 
-ALERT INFORMATION
-Our data collector is open-source. You can check it out here: https://github.com/Smartesting/gravity-data-collector
+
+<Alert type={AlertType.info}>
+  Our data collector is open-source. You can check it out here: https://github.com/Smartesting/gravity-data-collector
+</Alert>
 
 ### Get your authentication keys
 
@@ -33,16 +37,16 @@ Our data collector is open-source. You can check it out here: https://github.com
     alt="Highlight the two fields containing prod and test environment auth keys"
   />
 
-ALERT INFORMATION
-Why two keys?
-
-Gravity helps you to decide what end-to-end tests should be integrated in your test suite. In order to do so, it compares what your users actually do against what you test.
-That's why you need to set up the collector on both environments to get all the value of Gravity.
+<Alert type={AlertType.info} title="Why two keys?">
+  Gravity helps you to decide what end-to-end tests should be integrated in your test suite. In order to do so, it compares what your users actually do against what you test.
+  That's why you need to set up the collector on both environments to get all the value of Gravity.
+</Alert>
 
 ### Install the JavaScript library
 
-ALERT INFORMATION
-This library is designed to work in a **browser**. Do not install it in a Node environment
+<Alert type={AlertType.info}>
+  This library is designed to work in a **browser**. Do not install it in a Node environment
+</Alert>
 
 Here are the multiple ways to install the collector. Pick the one that matches with your tool stack:
 
@@ -109,8 +113,8 @@ Once initialized, the script will automatically record information and send them
 - **Press key/release key** triggered when a user press/release a key of their keyboard
 
 
-ALERT INFO
-PII Free
+<Alert type={AlertType.info} title="Privacy & GDPR compliance">
+</Alert>
 
 ## Metadata
 

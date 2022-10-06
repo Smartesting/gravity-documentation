@@ -1,4 +1,5 @@
 import Layout from '../components/layout'
+import Alert, { AlertType } from '../components/ui/Alert'
 
 export const meta = {
   headerTitle: 'Browsing sessions'
@@ -14,8 +15,9 @@ Filters is a first step to make sense of these data:
 
 You can easily keep sessions containing a specific page or a sequence of pages, so you can focus your exploration on a workflow.
 
-ALERT INFO
-You can filter only on pages that have been recorded by the collector. Free-form filter is not (yet) possible.
+<Alert type={AlertType.info}>
+  You can filter only on pages that have been recorded by the collector. Free-form filter is not (yet) possible.
+</Alert>
 
 ### How about URLs with a dynamic segment?
 

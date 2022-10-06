@@ -1,0 +1,51 @@
+@import '../../styles/constants/grid.scss';
+@import '../../styles/constants/colors.scss';
+
+.alert {
+  display: flex;
+  flex-direction: column;
+  padding: 0 calc(2 * $grid-base-unit);
+  margin-top: $grid-base-unit;
+  margin-bottom: calc(4* $grid-base-unit);
+  border: solid 1px;
+  border-radius: 4px;
+
+  & + & {
+    margin-top: -16px;
+  }
+
+  & > h5 {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+}
+
+@mixin alert-type($bg-color, $txt-color) {
+  @extend .alert;
+  background-color: $bg-color;
+  border-color: $bg-color;
+
+  & > h5 {
+    color: $txt-color;
+  }
+
+  & > p {
+    color: $txt-color;
+  }
+}
+
+.alertInfo {
+  @include alert-type($color-blue-info-background, $color-blue-info-text);
+}
+
+.alertSuccess {
+  @include alert-type($color-green-success-background, $color-green-success-text);
+}
+
+.alertWarning {
+  @include alert-type($color-yellow-warning-background, $color-yellow-warning-text);
+}
+
+.alertDanger {
+  @include alert-type($color-red-background-light, $color-red-danger-text);
+}

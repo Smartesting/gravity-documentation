@@ -1,5 +1,6 @@
-@import './constants/typography.scss';
 @import './constants/colors.scss';
+@import './constants/grid.scss';
+@import './constants/typography.scss';
 
 html {
   font-size: 16px;
@@ -35,4 +36,13 @@ p {
   @include text-style-typography-body-copy;
   line-height: 160%;
   color: $color-grey-800;
+}
+
+img {
+  margin: $grid-base-unit 0;
+}
+
+code {
+  padding: $grid-text-unit;
+  background-color: $color-grey-50;
 }

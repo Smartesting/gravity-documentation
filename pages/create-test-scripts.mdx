@@ -1,4 +1,5 @@
 import Layout from '../components/layout'
+import Alert, { AlertType } from '../components/ui/Alert'
 
 export const meta = {
   headerTitle: 'Creating test scripts',
@@ -7,12 +8,15 @@ export const meta = {
 Gravity accelerates the production of end-to-end test scripts.
 From a **session page**, you can easily get a test reproducing the sequence of actions of this session and avoid the cumbersome task of finding the right selector you need to tell your automation framework how to interact with your front-end
 
-ALERT WARNING
-Gravity does not handle assertions and test data yet, nor it can reuse your existing testing custom methods.
+<Alert type={AlertType.warning}>
+  Gravity does not handle assertions and test data yet, nor it can reuse your existing testing custom methods.
+</Alert>
 
-ALERT INFO
-The scripts are only compatible with Cypress v10.3 and following.
-We will add new compatibilities soon.
+
+<Alert type={AlertType.info}>
+  The scripts are only compatible with Cypress v10.3 and following.
+  We will add new compatibilities soon.
+</Alert>
 
 You have to options: downloading a bootstrap project or get a single test
 [SCREENSHOT export cypress button]

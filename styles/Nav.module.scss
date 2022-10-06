@@ -10,6 +10,7 @@
     padding-left: 0;
     & > li {
       padding: $grid-base-unit calc(2 * $grid-base-unit);
+      margin-bottom: 0;
       &.active {
         & > a {
           font-weight: 600;

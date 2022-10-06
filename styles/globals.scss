@@ -26,10 +26,15 @@ h1 {
 h2 {
   @include text-style-typography-h-2;
   color: $color-grey-800;
+  margin-bottom: 8px;
 }
 
 h3 {
-  @include text-style-typography-h-3
+  @include text-style-typography-h-3;
+}
+
+h4 {
+  @include text-style-typography-h-4 ;
 }
 
 p {
@@ -43,6 +48,15 @@ img {
 }
 
 code {
-  padding: $grid-text-unit;
+  display: inline-block;
+  padding: 0 $grid-text-unit;
   background-color: $color-grey-50;
+  word-break: break-all;
+  white-space: break-spaces;
+  max-width: 100%;
+  color: $color-base-dark;
+}
+
+ul > li {
+  margin-bottom: 4px;
 }

@@ -21,11 +21,6 @@ Gravity is a **Usage-Driven Testing platform**, meaning you need usage data to m
   We support only web-based applications for now. We might support mobile and/or desktop applications in the future.
 </Alert>
 
-
-<Alert type={AlertType.info}>
-  Our data collector is open-source. You can check it out here: https://github.com/Smartesting/gravity-data-collector
-</Alert>
-
 ### Get your authentication keys
 
 - Go to the **Configuration** page of your domain. If you do not have any data yet, you will automatically be redirected to this page.
@@ -45,28 +40,33 @@ Gravity is a **Usage-Driven Testing platform**, meaning you need usage data to m
 ### Install the JavaScript library
 
 <Alert type={AlertType.info}>
+  Our data collector is open-source. You can check it out here: https://github.com/Smartesting/gravity-data-collector
+</Alert>
+
+<Alert type={AlertType.info}>
   This library is designed to work in a **browser**. Do not install it in a Node environment
 </Alert>
 
 Here are the multiple ways to install the collector. Pick the one that matches with your tool stack:
 
-- **NPM**
+#### NPM
 ```
   npm install gravity-data-collector
 ```
 
-- **Yarn**
+#### Yarn
 ```
   yarn add gravity-data-collector
 ```
 
-- **CDN**
+#### CDN
 ```
 <script async id="logger" type="text/javascript"
-        src="https://unpkg.com/@smartesting/gravity-data-collector/dist/gravity-logger-min.js"></script>
+  src="https://unpkg.com/@smartesting/gravity-data-collector/dist/gravity-logger-min.js">
+</script>
 ```
 
-- **Add it to your ```package.json``` file**
+#### Add it to your ```package.json``` file
 ```
 {
   "dependencies": {

@@ -71,3 +71,12 @@ pre > code {
 ul > li {
   margin-bottom: 4px;
 }
+
+a {
+  text-decoration: inherit;
+  color: $color-indigo-brand;
+  font-weight: 500;
+  &:hover {
+    color: $color-violet-base;
+  }
+}

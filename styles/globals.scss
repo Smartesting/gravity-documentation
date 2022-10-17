@@ -47,6 +47,10 @@ img {
   margin: $grid-base-unit 0;
 }
 
+h4 > code {
+  text-transform: none;
+}
+
 code {
   display: inline-block;
   padding: 0 $grid-text-unit;
@@ -55,6 +59,13 @@ code {
   white-space: break-spaces;
   max-width: 100%;
   color: $color-base-dark;
+}
+
+pre > code {
+  padding: calc(4 * $grid-text-unit);
+  font-size: 0.9rem;
+  border: solid 1px $color-grey-100;
+  border-radius: $grid-text-unit;
 }
 
 ul > li {

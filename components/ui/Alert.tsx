@@ -9,7 +9,7 @@ export enum AlertType {
 
 export default function Alert({title, type, children}: React.PropsWithChildren<{title?: string, type: AlertType}>) {
 
-  let computedClass = "";
+  let computedClass = "", defaultTitle = "";
 
   switch(type) {
     case AlertType.info:

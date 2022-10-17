@@ -10,6 +10,7 @@
   overflow: hidden;
   & main {
     padding: calc(9 * $grid-base-unit) calc(7 * $grid-base-unit) 0;
+    margin-bottom: calc(10 * $grid-base-unit);
     overflow-y: auto;
     background-color: $color-base-white;
     border-right: solid 1px $color-grey-100;

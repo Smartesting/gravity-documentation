@@ -17,6 +17,7 @@
   & > h5 {
     font-size: 0.95rem;
     margin-bottom: 0;
+    margin-top: calc(2 * $grid-base-unit);
   }
 }
 

@@ -12,20 +12,20 @@ Gravity is a **Usage-Driven Testing platform**, meaning you need usage data to m
 
 ## Pre-requisites
 
-- Gravity account
-- Web-based application
+- Gravity account [(create one)](https://app.gravity-testing.com/register)
+- A web application
 
 ## Installation
 
-<Alert type={AlertType.warning}>
-  We support only web-based applications for now. We might support mobile and/or desktop applications in the future.
+<Alert type={AlertType.warning} title="Compatibilities">
+  Gravity only works for **web applications** for now. We might support mobile and/or desktop applications in the future.
 </Alert>
 
 ### Get your authentication keys
 
 - Go to the **Configuration** page of your domain. If you do not have any data yet, you will automatically be redirected to this page.
-- Get the key for your production environment. Its role is to let Gravity knows that the data should be stored as **actual "User"** sessions.
-- Get the key for your testing environment. Its role is to let Gravity knows that the data should be stored as **"Test"** sessions.
+- Get the key for your production environment. Its role is to let Gravity knows that the data should be stored as  **User** sessions.
+- Get the key for your testing environment. Its role is to let Gravity knows that the data should be stored as **Test** sessions.
 
 <Image
     src={authKeys}
@@ -33,21 +33,22 @@ Gravity is a **Usage-Driven Testing platform**, meaning you need usage data to m
   />
 
 <Alert type={AlertType.info} title="Why two keys?">
-  Gravity helps you to decide what end-to-end tests should be integrated in your test suite. In order to do so, it compares what your users actually do against what you test.
+  Gravity helps you decide what end-to-end tests should be integrated in your test suite. In that purpose, it compares what your users actually do against what you test.
   That's why you need to set up the collector on both environments to get all the value of Gravity.
 </Alert>
 
 ### Install the JavaScript library
 
 <Alert type={AlertType.info}>
-  Our data collector is open-source. You can check it out here: https://github.com/Smartesting/gravity-data-collector
+  Our data collector is open-source.
+  Check it out here: [Github - gravity-data-collector](https://github.com/Smartesting/gravity-data-collector)
 </Alert>
 
-<Alert type={AlertType.info}>
+<Alert type={AlertType.warning} title="Browser only">
   This library is designed to work in a **browser**. Do not install it in a Node environment
 </Alert>
 
-Here are the multiple ways to install the collector. Pick the one that matches with your tool stack:
+There are the multiple ways to install the collector. Pick the one that fit with your tool stack:
 
 #### NPM
 ```
@@ -61,18 +62,19 @@ Here are the multiple ways to install the collector. Pick the one that matches w
 
 #### CDN
 ```
-<script async id="logger" type="text/javascript"
-  src="https://unpkg.com/@smartesting/gravity-data-collector/dist/gravity-logger-min.js">
-</script>
+  <script async id="logger" type="text/javascript"
+    src="https://unpkg.com/@smartesting/gravity-data-collector/dist/gravity-logger-min.js">
+  </script>
 ```
 
 #### Add it to your ```package.json``` file
 ```
-{
-  "dependencies": {
-    "@smartesting/gravity-data-collector": "^2.1.9"
+  {
+    "dependencies": {
+      "@smartesting/gravity-data-collector": "^2.1.9"
+    }
   }
-}
+
 ```
 
 
@@ -93,11 +95,11 @@ Once the collector has been correctly installed, you must tell it when to start.
 a simple line of code:
 
 ```
-import GravityCollector from '@smartesting/gravity-data-collector/dist'
+  import GravityCollector from '@smartesting/gravity-data-collector/dist'
 
-GravityCollector.init({
- authKey: '<Production or test environment key>'
-})
+  GravityCollector.init({
+    authKey: '<Production or test environment key>'
+  })
 ```
 
 You will usually paste this code into your application entry point (```index.js|html|...```), but nothing prevents you doing it anywhere else (for example, if you want to focus only on a specific part of your application)
@@ -114,6 +116,9 @@ Once initialized, the script will automatically record information and send them
 
 
 <Alert type={AlertType.info} title="Privacy & GDPR compliance">
+  We built the Gravity data collector with the privacy of your users in mind since the very beginning.
+  It does not record any information that allow identification of a user.
+  All the fields data are obfuscated so we never store any critical information (like social security number, passwords, credit card...)
 </Alert>
 
 ## Metadata

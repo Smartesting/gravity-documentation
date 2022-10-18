@@ -1,6 +1,11 @@
 import Layout from '../components/layout'
 import Alert, { AlertType } from '../components/ui/Alert'
 
+import Image from 'next/image'
+
+import imgExportModal from '../public/img/create-test-scripts/export-modal.png'
+import imgExportSelect from '../public/img/create-test-scripts/export-select.png'
+
 export const meta = {
   headerTitle: 'Creating test scripts',
 }
@@ -12,14 +17,16 @@ From a **session page**, you can easily get a test reproducing the sequence of a
   Gravity does not handle assertions and test data yet, nor it can reuse your existing testing custom methods.
 </Alert>
 
-
 <Alert type={AlertType.info}>
   The scripts are only compatible with Cypress v10.3 and following.
   We will add new compatibilities soon.
 </Alert>
 
 You have to options: downloading a bootstrap project or get a single test
-[SCREENSHOT export cypress button]
+
+<Image
+    src={imgExportSelect}
+    alt="Two options of Cypress export" />
 
 ## Get a bootstrap project
 
@@ -33,6 +40,8 @@ You will get an archive file containing:
 
 Get the test for the current session ready to be copied and pasted in your code
 
-[SCREENSHOT script modal]
+<Image
+    src={imgExportModal}
+    alt="The script displayed from the session page" />
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>

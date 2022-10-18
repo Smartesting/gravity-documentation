@@ -1,4 +1,11 @@
 import Layout from '../components/layout'
+import Image from 'next/image'
+
+import imgLoginUsage from '../public/img/usages/login-usage.png'
+import imgDefineUsage from '../public/img/usages/define-usage.png'
+import imgDefineUsageScreen from '../public/img/usages/define-usage-screen.png'
+import imgDefineUsageWildcard from '../public/img/usages/define-usage-wildcard.png'
+import imgUsagesList from '../public/img/usages/usages-list.png'
 
 export const meta = {
   headerTitle: 'Tracking usage coverage'
@@ -11,29 +18,46 @@ The core idea of Gravity is to help you build an **end-to-end test suite** that 
 In Gravity, a usage is an ordered sequence of user actions within the same page or across multiple pages.
 When a user or test session go through all the steps of a usage, it will be considered as fulfilled (for a user session) or covered (for a test session)
 
-For example, a "Login" usage can look like this:
+For example, a "sign in" usage can look like this:
 
-[SCREENSHOT login usage]
+<Image
+    src={imgLoginUsage}
+    alt="A sign in usage is defined as fill in a username and password field on the /signin page"
+  />
 
 ## Define new usages
 
 You can define a new usage from a session page:
 
-[SCREENSHOT 'define new usage' CTA]
+<Image
+    src={imgDefineUsage}
+    alt="Define a usage from a session page"
+  />
 
 A new screen is displayed, allowing you to build the sequence of actions that will be the different steps of the usage:
 
-[SCREENSHOT]
+<Image
+    src={imgDefineUsageScreen}
+    alt="Usage definition screen"
+  />
 
 - You can select a whole page and no actions within. It will add a "Any action" event in the usage, meaning that a simple visit of the page will fulfill this step
-- You can modify the page address of a usage step to make it dynamic. In the following example, the step will be fulfilled on *any* ```/transactions``` page
+- You can modify the page address of a usage step to make it dynamic. In the following example, the step will be fulfilled on *any* ```/transactions/...``` page
 
-[SCREENSHOT]
+<Image
+    src={imgDefineUsageWildcard}
+    alt="Set a segment of a URL as dynamic"
+  />
 
 ## Browse usages
 
 You can find all the usages you defined for you application under the **Usages** section of Gravity
-[SCREENSHOT]
+
+<Image
+    src={imgUsagesList}
+    alt="List of defined usages"
+  />
+
 
 For each of them, you can see:
 

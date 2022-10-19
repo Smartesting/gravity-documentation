@@ -3,9 +3,9 @@ import styles from './TopNav.module.scss';
 
 export default function TopNav() {
   return <nav className={styles.topNav}>
-    <div className={styles.logoWrapper}>
+    <a href="https://gravity-testing.com" rel="noopener" className={styles.logoWrapper}>
       <Image src={"/gravity-logo-white.svg"} layout={'fill'} objectFit={'contain'} />
-    </div>
+    </a>
 
     <ul className={styles.loginMenu}>
       <li>

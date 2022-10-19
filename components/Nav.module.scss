@@ -3,9 +3,9 @@
 @import '../styles/constants/grid.scss';
 
 .mainNavbar {
-  border-right: solid 1px $color-grey-100;
   display: flex;
   flex-direction: column;
+  padding: calc(4 * $grid-base-unit) 0;
 
   & > ul {
     list-style: none;
@@ -39,10 +39,4 @@
     }
   }
 
-}
-
-.logoWrapper {
-  width: 100%;
-  text-align: center;
-  padding: calc(2 * $grid-base-unit) 0;
 }

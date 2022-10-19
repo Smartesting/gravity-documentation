@@ -1,0 +1,32 @@
+@import '../styles/constants/colors.scss';
+@import '../styles/constants/typography.scss';
+@import '../styles/constants/grid.scss';
+
+.topNav {
+  background-color: $color-indigo-brand;
+  display: flex;
+
+  & > .loginMenu {
+    display: flex;
+    list-style: none;
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: 24px;
+    align-items: center;
+    & > li {
+      margin: 0 $grid-base-unit;
+      & > a {
+        border: solid 1px $color-base-white;
+        border-radius: 4px;
+        color: $color-base-white;
+        padding: 8px;
+      }
+    }
+  }
+}
+
+.logoWrapper {
+  text-align: center;
+  padding: $grid-base-unit 0;
+  margin-left: 24px;
+}

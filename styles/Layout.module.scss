@@ -1,6 +1,11 @@
 @import './constants/grid.scss';
 @import './constants/colors.scss';
 
+.lMain {
+  height: 100%;
+  display: grid;
+}
+
 .lNav {
   display: grid;
   height: 100%;
@@ -9,8 +14,8 @@
   margin: 0 auto;
   overflow: hidden;
   & main {
-    padding: calc(9 * $grid-base-unit) calc(7 * $grid-base-unit) 0;
-    margin-bottom: calc(10 * $grid-base-unit);
+    padding: calc(2 * $grid-base-unit) calc(7 * $grid-base-unit);
+    padding-bottom: calc(8 * $grid-base-unit);
     overflow-y: auto;
     background-color: $color-base-white;
     border-right: solid 1px $color-grey-100;

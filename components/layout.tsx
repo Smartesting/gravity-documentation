@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Nav from "./nav";
 import styles from '../styles/Layout.module.scss'
+import TopNav from "./TopNav";
 
 type LayoutMetaData = {
   headerTitle: string,
@@ -9,7 +10,7 @@ type LayoutMetaData = {
 
 export default function Layout({ children, meta } : React.PropsWithChildren<{meta: LayoutMetaData}>) {
   return (
-    <div className={styles.lNav}>
+    <div className={styles.lMain}>
       <Head>
         <title>Gravity - {meta.headerTitle}</title>
         <meta name="description" content="Gravity end-user application https://gravity-testing.com" />
@@ -22,14 +23,18 @@ export default function Layout({ children, meta } : React.PropsWithChildren<{met
         </style>
       </Head>
 
-      <Nav />
+      <TopNav />
 
-      <main>
-        <div className={styles.contentWrapper}>
-          <h1>{meta.pageTitle || meta.headerTitle}</h1>
-          {children}
-        </div>
-      </main>
+      <div className={styles.lNav}>
+        <Nav />
+
+        <main>
+          <div className={styles.contentWrapper}>
+            <h1>{meta.pageTitle || meta.headerTitle}</h1>
+            {children}
+          </div>
+        </main>
+      </div>
     </div>
   )
 }

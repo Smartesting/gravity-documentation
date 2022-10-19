@@ -27,6 +27,19 @@ h2 {
   @include text-style-typography-h-2;
   color: $color-grey-800;
   margin-bottom: 8px;
+  position: relative;
+
+  &:hover {
+    & > .anchor-link {
+      opacity: 1;
+    }
+  }
+
+  & > .anchor-link {
+    opacity: 0;
+    position: absolute;
+    transform: translate(-1em, 0);
+  }
 }
 
 h3 {

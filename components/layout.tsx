@@ -2,6 +2,8 @@ import Head from "next/head";
 import Nav from "./nav";
 import styles from '../styles/Layout.module.scss'
 import TopNav from "./TopNav";
+import { MDXProvider } from "@mdx-js/react";
+import H2 from './overrides/H2'
 
 type LayoutMetaData = {
   headerTitle: string,
@@ -31,7 +33,7 @@ export default function Layout({ children, meta } : React.PropsWithChildren<{met
         <main>
           <div className={styles.contentWrapper}>
             <h1>{meta.pageTitle || meta.headerTitle}</h1>
-            {children}
+            <MDXProvider components={{h2: H2}}>{children}</MDXProvider>
           </div>
         </main>
       </div>

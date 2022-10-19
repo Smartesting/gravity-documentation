@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import styles from '../styles/Nav.module.scss';
+import styles from './Nav.module.scss';
 
 export default function NavLink({ children, href, }: React.PropsWithChildren<{ href: string}>) {
   const router = useRouter();

@@ -14,7 +14,7 @@ export default function Layout({ children, meta } : React.PropsWithChildren<{met
       <Head>
         <title>Gravity - {meta.headerTitle}</title>
         <meta name="description" content="Gravity end-user application https://gravity-testing.com" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/gravity-icon.svg" sizes="any" type="image/svg+xml"/>
         <meta charSet="UTF-8" />
 		    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		    <meta name="viewport" content="width=device-width, initial-scale=1.0" />

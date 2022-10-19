@@ -4,7 +4,7 @@ import styles from './TopNav.module.scss';
 export default function TopNav() {
   return <nav className={styles.topNav}>
     <div className={styles.logoWrapper}>
-      <Image src={"/gravity-icon-white.svg"} width={"56px"} height={"56px"} objectPosition={"50% 50%"}/>
+      <Image src={"/gravity-logo-white.svg"} layout={'fill'} objectFit={'contain'} />
     </div>
 
     <ul className={styles.loginMenu}>

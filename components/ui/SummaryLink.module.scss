@@ -1,0 +1,29 @@
+@import '../../styles/constants/grid.scss';
+@import '../../styles/constants/colors.scss';
+
+.summaryLink {
+  display: block;
+  padding: calc(5 * $grid-text-unit);
+  border: solid 1px $color-grey-100;
+  margin-top: calc(2 * $grid-base-unit);
+  border-radius: $grid-text-unit;
+
+  & > h6 {
+    margin: 0;
+    margin-bottom: $grid-base-unit;
+    font-size: 1rem;
+    color: $color-violet-base;
+  }
+
+  & p {
+    margin: 0;
+  }
+
+  &:hover {
+    background-color: $color-grey-50;
+    & > h6 {
+      color: $color-violet-brand;
+    }
+  }
+
+}

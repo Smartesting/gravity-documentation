@@ -1,0 +1,35 @@
+import Layout from '../components/layout'
+import SummaryLink from '../components/ui/SummaryLink'
+
+export const meta = {
+  headerTitle: 'Documentation home',
+  pageTitle: 'Gravity - Documentation'
+}
+
+## What is Gravity?
+
+Gravity helps **Agile & DevOps teams** to deliver high-quality software faster, by enabling them **select** and **design** end-to-end tests accordingly to HOW their users truly interact with their software.
+
+We call it a **Usage-Driven Testing** platform.
+
+## Browse the documentation
+
+<SummaryLink href="/getting-started" title="Getting started">
+  How to install and configure Gravity on your production and test environment and get your first data
+</SummaryLink>
+
+<SummaryLink href="/browse-sessions" title="Browsing sessions">
+  Explore your data and start figuring out how your customers actually use your application
+</SummaryLink>
+
+<SummaryLink href="/usages" title="Tracking usage coverage">
+  Monitor your test coverage against your users behavior
+</SummaryLink>
+
+<SummaryLink href="/create-test-scripts" title="Creating test scripts">
+  Complete your test suite with end-to-end tests
+</SummaryLink>
+
+
+
+export default ({ children }) => <Layout meta={meta}>{children}</Layout>

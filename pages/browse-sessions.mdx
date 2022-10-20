@@ -10,26 +10,31 @@ export const meta = {
   headerTitle: 'Browsing sessions'
 }
 
-The **Sessions** section of Gravity allows you to browse the recorded user and test sessions so you can have a first glimpse into how your application is used
+The **Sessions** section of Gravity allows you to browse the recorded sessions and have a first glimpse into how your application is used.
 
 ## Finding sessions
-By default, all the sessions ever collected are displayed, grouped by environments (user/test).
-Filters is a first step to make sense of these data:
+
+By default, all the sessions ever collected are displayed and grouped by environments (user/test).
+
+Filters are the first way to make sense of these data:
 
 <Image
     src={imgSessionsFilter}
     alt="You can filter sessions from the sessions page"
   />
 
-You can easily keep sessions containing a specific page or a sequence of pages, so you can focus your exploration on a workflow.
+You can easily find sessions containing a specific page or a sequence of pages. It helps you focus your exploration of a workflow.
 
 <Alert type={AlertType.info}>
-  You can filter only on pages that have been recorded by the collector. Free-form filter is not (yet) possible.
+  You can only filter on pages recorded by the collector. Free-form filters are not (yet) possible.
 </Alert>
 
 ### How about URLs with a dynamic segment?
 
-When you need to filter on a "type" of page rather than a "specific" page, like for example on generic "product pages" (```/products/<any product>```) rather than "a specific product page" (```/products/my-awesome-product```), you can replace the flexible part of the URL by a wildcard character ("*"):
+When you need to filter on a "type" of pages rather than a "specific" page,
+you can replace the flexible part of the URL with a wildcard character ("*").
+
+A common example would be filtering on generic "product pages" (```/products/<any product>```) rather than "a specific product page" (```/products/my-awesome-product```).
 
 <Image
     src={imgSessionsFilterWildcard}
@@ -38,14 +43,14 @@ When you need to filter on a "type" of page rather than a "specific" page, like 
 
 ## Session details
 
-On a session page, you will find every information to reproduce the journey of a user of your application
+On a session page, you will find every information to reproduce the journey of a user of your application.
 
 <Image
     src={imgSessionDetails}
     alt="A session page, containing all the data recorded during the current session"
   />
 
-The pages they visited are displayed in a chronological order, from left (oldest visit) to right (most recent visit).
-For each of these page visit, the list of user actions are displayed. You can expand a user action to display its metadata (see [Getting Started - Metadata](/getting-started#metadata))
+The pages they visited are displayed in chronological order.
+For each page visit, the list of user actions is displayed. You can expand a user action to display its metadata (see [Getting Started - Metadata](/getting-started#metadata)).
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>

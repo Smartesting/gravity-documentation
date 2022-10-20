@@ -10,19 +10,18 @@ export const meta = {
   headerTitle: 'Creating test scripts',
 }
 
-Gravity accelerates the production of end-to-end test scripts.
-From a **session page**, you can easily get a test reproducing the sequence of actions of this session and avoid the cumbersome task of finding the right selector you need to tell your automation framework how to interact with your front-end
+Gravity accelerates the production of end-to-end test scripts. From a session page, you can quickly get a test reproducing the sequence of actions of this session and avoid the cumbersome task of finding the right selectors you need to tell your automation framework how to interact with your frontend code.
 
 <Alert type={AlertType.warning}>
-  Gravity does not handle assertions and test data yet, nor it can reuse your existing testing custom methods.
+  Gravity does not handle assertions and test data yet, nor can it reuse your existing testing custom methods.
 </Alert>
 
 <Alert type={AlertType.info}>
-  The scripts are only compatible with Cypress v10.3 and following.
+  The scripts are compatible with Cypress v10.3 and further versions.
   We will add new compatibilities soon.
 </Alert>
 
-You have to options: downloading a bootstrap project or get a single test
+You have two available options: downloading a bootstrap project or getting a single test.
 
 <Image
     src={imgExportSelect}
@@ -32,13 +31,13 @@ You have to options: downloading a bootstrap project or get a single test
 
 You will get an archive file containing:
 
-- ```README.md``` a set of instructions to help you setup and execute your test
+- ```README.md``` instructions to help you setup and execute your test
 - ```package.json``` containing the minimal dependencies
 - An ```e2e``` folder containing the test generated from the session
 
 ## Export only one test
 
-Get the test for the current session ready to be copied and pasted in your code
+Get the test for the current session ready to be copied into your code
 
 <Image
     src={imgExportModal}

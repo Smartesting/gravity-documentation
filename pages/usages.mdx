@@ -11,14 +11,14 @@ export const meta = {
   headerTitle: 'Tracking usage coverage'
 }
 
-The core idea of Gravity is to help you build an **end-to-end test suite** that covers efficiently the most important features and paths for your users. This is where the **Usages** section of Gravity can help.
+The core idea of Gravity is to help you build an **end-to-end test suite** that covers the most critical features and paths for your users. The **Usages** section of Gravity allows watching how your application is used and informs your testing decisions.
 
 ## What is a usage?
 
 In Gravity, a usage is an ordered sequence of user actions within the same page or across multiple pages.
-When a user or test session go through all the steps of a usage, it will be considered as fulfilled (for a user session) or covered (for a test session)
+When a user or test session goes through all the steps of usage, it is considered fulfilled (for a user session) or covered (for a test session).
 
-For example, a "sign in" usage can look like this:
+For example, a "sign in" usage looks like this:
 
 <Image
     src={imgLoginUsage}
@@ -41,8 +41,8 @@ A new screen is displayed, allowing you to build the sequence of actions that wi
     alt="Usage definition screen"
   />
 
-- You can select a whole page and no actions within. It will add a "Any action" event in the usage, meaning that a simple visit of the page will fulfill this step
-- You can modify the page address of a usage step to make it dynamic. In the following example, the step will be fulfilled on *any* ```/transactions/...``` page
+- You can select a whole page and no actions within. It will add an "Any action" event in the usage, meaning that a simple visit of the page will fulfill this step
+- You can modify the page address of a usage step to make it dynamic. In the following example, the step is fulfilled on *any* ```/transactions/...``` page.
 
 <Image
     src={imgDefineUsageWildcard}
@@ -51,7 +51,7 @@ A new screen is displayed, allowing you to build the sequence of actions that wi
 
 ## Browse usages
 
-You can find all the usages you defined for you application under the **Usages** section of Gravity
+You can find all the usages you defined for you application under the **Usages** section of Gravity.
 
 <Image
     src={imgUsagesList}
@@ -64,7 +64,7 @@ For each of them, you can see:
 - The steps a session has to go through to consider the usage as fulfilled or covered
 - Metrics on the user and test sessions that fulfill or cover the usage
 
-Use these metrics to learn which usages needs more tests and which ones could be less tested
+Use these metrics to learn which usages need more tests and which ones could be less tested.
 
 
 

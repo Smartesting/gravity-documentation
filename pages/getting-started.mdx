@@ -8,7 +8,7 @@ export const meta = {
   headerTitle: 'Getting started',
 }
 
-Gravity is a **Usage-Driven Testing platform**, meaning you need usage data to make it work. On this page, learn how to start collecting usage data from your application and send them to Gravity.
+Gravity is a **Usage-Driven Testing platform**, meaning you need usage data to make it work. On this page, learn how to start collecting these data from your application and send them to Gravity.
 
 ## Pre-requisites
 
@@ -23,9 +23,9 @@ Gravity is a **Usage-Driven Testing platform**, meaning you need usage data to m
 
 ### Get your authentication keys
 
-- Go to the **Configuration** page of your domain. If you do not have any data yet, you will automatically be redirected to this page.
-- Get the key for your production environment. Its role is to let Gravity knows that the data should be stored as  **User** sessions.
-- Get the key for your testing environment. Its role is to let Gravity knows that the data should be stored as **Test** sessions.
+- Go to the **Configuration** page of your domain. You will be redirected to this page if no data has been received.
+- Get the key for your production environment. You will need it to record **User** sessions.
+- Get the key for your production environment. You will need it to record **Test** sessions.
 
 <Image
     src={authKeys}
@@ -33,8 +33,7 @@ Gravity is a **Usage-Driven Testing platform**, meaning you need usage data to m
   />
 
 <Alert type={AlertType.info} title="Why two keys?">
-  Gravity helps you decide what end-to-end tests should be integrated in your test suite. In that purpose, it compares what your users actually do against what you test.
-  That's why you need to set up the collector on both environments to get all the value of Gravity.
+  Gravity helps you decide what end-to-end tests should be integrated into your test suite. For that purpose, it compares what your users do against what you test.
 </Alert>
 
 ### Install the JavaScript library

@@ -4,6 +4,7 @@ import styles from '../styles/Layout.module.scss'
 import TopNav from "./TopNav";
 import { MDXProvider } from "@mdx-js/react";
 import H2 from './overrides/H2'
+import Script from 'next/script'
 
 type LayoutMetaData = {
   headerTitle: string,
@@ -13,6 +14,18 @@ type LayoutMetaData = {
 export default function Layout({ children, meta } : React.PropsWithChildren<{meta: LayoutMetaData}>) {
   return (
     <div className={styles.lMain}>
+
+      <Script src="https://www.googletagmanager.com/gtag/js?id=UA-204206128-1" strategy="afterInteractive" />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-204206128-1');
+        `}
+      </Script>
+
       <Head>
         <title>Gravity - {meta.headerTitle}</title>
         <meta name="description" content="Gravity end-user application https://gravity-testing.com" />
@@ -24,6 +37,8 @@ export default function Layout({ children, meta } : React.PropsWithChildren<{met
           @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;500;700&display=swap');
         </style>
       </Head>
+
+
 
       <TopNav />
 

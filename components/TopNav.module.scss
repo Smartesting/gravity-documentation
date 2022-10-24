@@ -5,6 +5,7 @@
 .topNav {
   background-color: $color-indigo-brand;
   display: flex;
+  position: relative;
 
   & > .loginMenu {
     display: flex;
@@ -23,6 +24,10 @@
       }
     }
   }
+
+  & > .menuToggle {
+    margin-left: auto;
+  }
 }
 
 .logoWrapper {
@@ -32,4 +37,22 @@
   width: 128px;
   text-align: center;
   margin-left: 24px;
+}
+
+
+.responsiveMenu {
+  width: 100%;
+  position: absolute;
+  padding-left: 0;
+  top: calc(8 * $grid-base-unit);
+  z-index: 3;
+
+  background-color: $color-base-white;
+  list-style: none;
+  border-bottom: solid 1px $color-grey-100;
+
+  & > li {
+    padding: calc(2 * $grid-base-unit);
+    font-size: 1.1rem;
+  }
 }

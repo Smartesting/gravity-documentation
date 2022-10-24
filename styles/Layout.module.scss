@@ -15,9 +15,9 @@
   }
 
   & > .topNavMobileWrapper {
-    display: none;
-    @include for-phone-only {
-      display: initial;
+    display: initial;
+    @include for-desktop-up {
+      display: none;
     }
   }
 }
@@ -41,7 +41,12 @@
   }
 
   & main {
-    padding: calc(2 * $grid-base-unit) calc(7 * $grid-base-unit);
+    padding: calc(2 * $grid-base-unit);
+
+    @include for-desktop-up {
+      padding: calc(2 * $grid-base-unit) calc(7 * $grid-base-unit);
+    }
+
     padding-bottom: calc(8 * $grid-base-unit);
     overflow-y: auto;
     background-color: $color-base-white;

@@ -1,18 +1,45 @@
 @import './constants/grid.scss';
 @import './constants/colors.scss';
+@import './constants/responsive.scss';
 
 .lMain {
   height: 100%;
   display: grid;
+
+
+  & > .topNavWrapper {
+    display: none;
+    @include for-desktop-up {
+      display: initial;
+    }
+  }
+
+  & > .topNavMobileWrapper {
+    display: none;
+    @include for-phone-only {
+      display: initial;
+    }
+  }
 }
 
 .lNav {
-  display: grid;
   height: 100%;
-  grid-template-columns: 200px 1fr;
-  max-width: 1024px;
   margin: 0 auto;
-  overflow: hidden;
+
+  @include for-desktop-up {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    max-width: 1024px;
+    overflow: hidden;
+  }
+
+  & > .navbarWrapper {
+    display: none;
+    @include for-desktop-up {
+      display: initial;
+    }
+  }
+
   & main {
     padding: calc(2 * $grid-base-unit) calc(7 * $grid-base-unit);
     padding-bottom: calc(8 * $grid-base-unit);

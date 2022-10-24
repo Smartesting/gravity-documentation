@@ -5,6 +5,7 @@ import TopNav from "./TopNav";
 import { MDXProvider } from "@mdx-js/react";
 import H2 from './overrides/H2'
 import Script from 'next/script'
+import TopNavMobile from "./TopNavMobile";
 
 type LayoutMetaData = {
   headerTitle: string,
@@ -38,12 +39,11 @@ export default function Layout({ children, meta } : React.PropsWithChildren<{met
         </style>
       </Head>
 
-
-
-      <TopNav />
+      <span className={styles.topNavWrapper}><TopNav /></span>
+      <span className={styles.topNavMobileWrapper}><TopNavMobile /></span>
 
       <div className={styles.lNav}>
-        <Nav />
+        <span className={styles.navbarWrapper}><Nav /></span>
 
         <main>
           <div className={styles.contentWrapper}>

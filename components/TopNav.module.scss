@@ -6,6 +6,7 @@
   background-color: $color-indigo-brand;
   display: flex;
   position: relative;
+  z-index: 3;
 
   & > .loginMenu {
     display: flex;
@@ -27,6 +28,22 @@
 
   & > .menuToggle {
     margin-left: auto;
+    align-self: center;
+    margin-right: 16px;
+    padding: 16px;
+    border-radius: 4px;
+    color: $color-base-white;
+    border: solid 1px $color-base-white;
+    background-color: $color-indigo-brand;
+  }
+
+  & .backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -2;
+    top: 80px;
   }
 }
 
@@ -54,5 +71,9 @@
   & > li {
     padding: calc(2 * $grid-base-unit);
     font-size: 1.1rem;
+
+    & > a {
+      width: 100%;
+    }
   }
 }

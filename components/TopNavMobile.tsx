@@ -30,5 +30,7 @@ export default function TopNavMobile() {
           </li>
         </ul>
     }
+
+  { menuExpanded && <div className={styles.backdrop}></div> }
   </nav>
 }

@@ -5,6 +5,7 @@ import Image from 'next/image'
 import imgSessionsFilter from '../public/img/browse-sessions/sessions-filter.png'
 import imgSessionsFilterWildcard from '../public/img/browse-sessions/sessions-filter-wildcard.png'
 import imgSessionDetails from '../public/img/browse-sessions/session-details.png'
+import imgSessionTraitsFilter from '../public/img/browse-sessions/sessions-traits-filter.png'
 
 export const meta = {
   headerTitle: 'Browsing sessions'
@@ -40,6 +41,27 @@ A common example would be filtering on generic "product pages" (```/products/<an
     src={imgSessionsFilterWildcard}
     alt="A filter using a wildcard"
   />
+
+## Segmenting sessions
+
+You may want to give more business context to your sessions. For example, you would like to work only on sessions coming from a specific type of users (like "paying users" or "connected users", ...).
+Gravity allows you to add __traits__ to your sessions so you can easily retrieve data for a given context.
+
+To learn about how to add those traits, please see the [gravity-data-collector documentation](https://github.com/Smartesting/gravity-data-collector#identify-sessions-with-traits)
+
+Once you have collected a few sessions with traits set, this area will appear in the filter section:
+
+<Image
+    src={imgSessionTraitsFilter}
+    alt="Filtering by 'connected' trait"
+  />
+
+Select a trait and a value to display only sessions matching the filter.
+
+<Alert type={AlertType.info} title="Restrictions">
+  A trait value can only be a number, a string or a boolean (```true/false```). You can not give a complex value to a trait, like an object or an array.
+  Note that the value is limited to 255 characters.
+</Alert>
 
 ## Session details
 

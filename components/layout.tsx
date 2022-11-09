@@ -26,6 +26,17 @@ export default function Layout({ children, meta } : React.PropsWithChildren<{met
           gtag('config', 'UA-204206128-1');
         `}
       </Script>
+      <Script async id="logger" type="text/javascript" src="https://unpkg.com/@smartesting/gravity-data-collector/dist/gravity-logger-min.js"></Script>
+      <Script>
+        {`  
+          const script = document.querySelector('#logger')
+          script.addEventListener('load', function () {
+            window.GravityCollector.init({
+              authKey: 'dd08d18b-ff35-488c-9d8c-a62f4eb5f714'
+            })
+          })
+        `}
+      </Script>
 
       <Head>
         <title>Gravity - {meta.headerTitle}</title>

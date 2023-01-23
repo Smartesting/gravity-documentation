@@ -6,9 +6,11 @@ import imgDefineUsage from '../public/img/usages/define-usage.png'
 import imgDefineUsageScreen from '../public/img/usages/define-usage-screen.png'
 import imgDefineUsageWildcard from '../public/img/usages/define-usage-wildcard.png'
 import imgUsagesList from '../public/img/usages/usages-list.png'
+import imgDefineScope from '../public/img/usages/define-scope.png'
+import imgScopeConfiguration from '../public/img/usages/scope-configuration.png'
 
 export const meta = {
-  headerTitle: 'Tracking usage coverage'
+    headerTitle: 'Tracking usage coverage'
 }
 
 The core idea of Gravity is to help you build an **end-to-end test suite** that covers the most critical features and paths for your users. The **Usages** section of Gravity allows watching how your application is used and informs your testing decisions.
@@ -23,7 +25,7 @@ For example, a "sign in" usage looks like this:
 <Image
     src={imgLoginUsage}
     alt="A sign in usage is defined as fill in a username and password field on the /signin page"
-  />
+/>
 
 ## Define new usages
 
@@ -32,14 +34,14 @@ You can define a new usage from a session page:
 <Image
     src={imgDefineUsage}
     alt="Define a usage from a session page"
-  />
+/>
 
 A new screen is displayed, allowing you to build the sequence of actions that will be the different steps of the usage:
 
 <Image
     src={imgDefineUsageScreen}
     alt="Usage definition screen"
-  />
+/>
 
 - You can select a whole page and no actions within. It will add an "Any action" event in the usage, meaning that a simple visit of the page will fulfill this step
 - You can modify the page address of a usage step to make it dynamic. In the following example, the step is fulfilled on *any* ```/transactions/...``` page.
@@ -47,7 +49,7 @@ A new screen is displayed, allowing you to build the sequence of actions that wi
 <Image
     src={imgDefineUsageWildcard}
     alt="Set a segment of a URL as dynamic"
-  />
+/>
 
 ## Browse usages
 
@@ -56,7 +58,7 @@ You can find all the usages you defined for you application under the **Usages**
 <Image
     src={imgUsagesList}
     alt="List of defined usages"
-  />
+/>
 
 
 For each of them, you can see:
@@ -66,6 +68,17 @@ For each of them, you can see:
 
 Use these metrics to learn which usages need more tests and which ones could be less tested.
 
+## Define a scope
 
+The definition of a scope allows Gravity to compute metrics for each usage on a subset of sessions containing specific
+traits or happening during a custom time range. Different scopes can be used on test and user sessions.
 
-export default ({ children }) => <Layout meta={meta}>{children}</Layout>
+<Image src={imgDefineScope} alt="Scope definition panel"/>
+
+Previously collected <a href={'/configure-data-collection#add-custom-data-traits'}>traits</a> can be used in the scope
+to exclude non-matching sessions from the computed coverage metrics. In the same way, a time range can also be defined to keep
+only interesting sessions:
+
+<Image src={imgScopeConfiguration} alt="Scope traits definition"/>
+
+export default ({children}) => <Layout meta={meta}>{children}</Layout>

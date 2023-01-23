@@ -1,5 +1,7 @@
+import Image from 'next/image'
 import Layout from '../components/layout'
 import Alert, { AlertType } from '../components/ui/Alert'
+import imgBuildId from '../public/img/configure-data-collection/build-id.png'
 
 export const meta = {
   headerTitle: 'Configure data collection'
@@ -137,6 +139,16 @@ window.GravityCollector.identifySession('connected', true)
   - You can call the ```identifySession``` at any moment of the lifecycle of the collected session. The trait will be globally set on the session.
 </Alert>
 
+### Add build information
+
+In order to easily identify your tests sessions in Gravity, the Gravity Data Collector can send build information to Gravity
+using one of the two following environment variables:
+- `GRAVITY_BUILD_ID`
+- `REACT_APP_GRAVITY_BUILD_ID`
+
+If one of those variables is set, the collector will send the build number with your test sessions,
+then display it in the sessions list:
+
+<Image src={imgBuildId} alt="Sessions with build ID"/>
 
 export default ({ children }) => <Layout meta={meta}>{children}</Layout>
-

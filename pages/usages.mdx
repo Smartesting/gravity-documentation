@@ -8,6 +8,8 @@ import imgDefineUsageWildcard from '../public/img/usages/define-usage-wildcard.p
 import imgUsagesList from '../public/img/usages/usages-list.png'
 import imgDefineScope from '../public/img/usages/define-scope.png'
 import imgScopeConfiguration from '../public/img/usages/scope-configuration.png'
+import imgSuggestionsList from '../public/img/usages/usage-suggestions-list.png'
+import imgDefineUsageModal from '../public/img/usages/define-usage-modal.png'
 
 export const meta = {
     headerTitle: 'Tracking usage coverage'
@@ -27,7 +29,7 @@ For example, a "sign in" usage looks like this:
     alt="A sign in usage is defined as fill in a username and password field on the /signin page"
 />
 
-## Define new usages
+## Define new usage from a session
 
 You can define a new usage from a session page:
 
@@ -48,8 +50,28 @@ A new screen is displayed, allowing you to build the sequence of actions that wi
 
 <Image
     src={imgDefineUsageWildcard}
+    alt="Define a usage from a suggestion"
+/>
+
+## Define new usage from a suggestion
+
+You can define a new usage from a usage suggestion:
+
+<Image
+    src={imgSuggestionsList}
     alt="Set a segment of a URL as dynamic"
 />
+
+A modal window is displayed, allowing you to build the sequence of actions that will be the different steps of the usage:
+
+<Image
+    src={imgDefineUsageModal}
+    alt="Usage definition modal"
+/>
+
+- A usage suggestion has all its actions on the same page;
+- At least one action must be selected to create the usage;
+- You can modify the page address of an action to make it dynamic, as in the "Define new usage from a session" section.
 
 ## Browse usages
 

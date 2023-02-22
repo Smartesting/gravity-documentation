@@ -139,15 +139,21 @@ window.GravityCollector.identifySession('connected', true)
   - You can call the ```identifySession``` at any moment of the lifecycle of the collected session. The trait will be globally set on the session.
 </Alert>
 
-### Add build information
+## Track test execution
 
-In order to easily identify your tests sessions in Gravity, the Gravity Data Collector can send build information to Gravity
-using one of the two following environment variables:
+By default, every collected test sessions are stored together. For example, if your tests are run by a CI tool, all the sessions created by the execution of a test by a build won't be grouped in Gravity.
+It can be a problem if you want to evaluate your application usage coverage by a specific version of your tests.
+
+In order to easily identify your tests sessions in Gravity, the `gravity-data-collector` can send test run information along interaction data. This is what we call a **build** in the Gravity UI.
+
+Concretely, you need to set one of the two following environment variables with an identifier for the current test execution (a build number for instance):
+
 - `GRAVITY_BUILD_ID`
-- `REACT_APP_GRAVITY_BUILD_ID`
+- `REACT_APP_GRAVITY_BUILD_ID` (in the case of a `create-react-app` application)
 
-If one of those variables is set, the collector will send the build number with your test sessions,
-then display it in the sessions list:
+
+If one of these variables is set, the collector will **automatically** send the build number with your test sessions. You don't need further configuration at the `gravity-data-collector` level.
+Builds are displayed in the sessions list:
 
 <Image src={imgBuildId} alt="Sessions with build ID"/>
 

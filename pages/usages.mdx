@@ -10,6 +10,8 @@ import imgDefineScope from '../public/img/usages/define-scope.png'
 import imgScopeConfiguration from '../public/img/usages/scope-configuration.png'
 import imgSuggestionsList from '../public/img/usages/usage-suggestions-list.png'
 import imgDefineUsageModal from '../public/img/usages/define-usage-modal.png'
+import imUntestedUsage from '../public/img/usages/untested-usage.png'
+import imgNoUntestedUsageMessage from '../public/img/usages/no-untested-usage-message.png'
 
 export const meta = {
     headerTitle: 'Tracking usage coverage'
@@ -89,6 +91,16 @@ For each of them, you can see:
 - Metrics on the user and test sessions that fulfill or cover the usage
 
 Use these metrics to learn which usages need more tests and which ones could be less tested.
+
+## Untested usages
+
+A usage is considered untested if it is not covered by a single test in the current scope. You can find the list of untested usage under the usages list:
+
+<Image src={imUntestedUsage} alt="Untested scope"/>
+
+If all your usages are covered by at least one test in the scope, you get the following message:
+
+<Image src={imgNoUntestedUsageMessage} alt="No untested usage in scope"/>
 
 ## Define a scope
 

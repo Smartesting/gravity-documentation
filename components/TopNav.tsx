@@ -9,10 +9,10 @@ export default function TopNav() {
 
     <ul className={styles.loginMenu}>
       <li>
-        <a rel="noopener" href="https://app.gravity-testing.com/register">Try for free</a>
+        <a rel="noopener" href="https://calendly.com/julien-botella">Book a demo</a>
       </li>
       <li>
-        <a rel="noopener" href="https://app.gravity-testing.com/login">Login</a>
+        <a rel="noopener" href="https://gravity.smartesting.com/login">Login</a>
       </li>
     </ul>
   </nav>
